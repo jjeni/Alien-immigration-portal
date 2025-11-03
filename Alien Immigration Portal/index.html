@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Jersey+10&display=swap" rel="stylesheet">
+    <title>Alien Immigration Portal</title>
+</head>
+<body>
+    <div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="/bg.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="heading">ALIEN IMMIGRATION PORTAL</div>
+    <div class="disclaimer">
+        <div class="disclaimer-track">
+            <span class="sub-heading">
+                * IF YOU ARE AN ALIEN YOU MUST FILL OUT THIS FORM TO GET IMMIGRATION ACCESS *
+            </span>
+            <span class="sub-heading">
+                * IF YOU ARE AN ALIEN YOU MUST FILL OUT THIS FORM TO GET IMMIGRATION ACCESS *
+            </span>
+        </div>
+    </div>
+    <div class="form-container">
+        <form id="alienForm">
+            <div class="form-group">
+                <label for="planet-name">Planet Name *</label>
+                <input type="text" name="planet_name" id="planet-name" required>
+                <div class="field-hint">Must contain at least one vowel and one digit</div>
+                <div class="error" id="planet-error"></div>
+                <div class="success" id="planet-success">✓ Valid planet name</div>
+            </div>
+
+            <div class="form-group">
+                <label for="antenna-count">Antenna Count *</label>
+                <input type="number" name="antenna_count" id="antenna-count" required>
+                <div class="field-hint">Only even numbers allowed</div>
+                <div class="error" id="antenna-error"></div>
+                <div class="success" id="antenna-success">✓ Valid antenna count</div>
+            </div>
+
+            <div class="form-group">
+                <label for="alien-id">Alien ID *</label>
+                <input type="text" name="alien_id" id="alien-id" required>
+                <div class="field-hint">Format: ZOR-XY_9999@UFO (3 letters-2 letters_4 digits@3 letters)</div>
+                <div class="error" id="id-error"></div>
+                <div class="success" id="id-success">✓ Valid Alien ID</div>
+            </div>
+
+            <div class="form-group">
+                <label for="favorite-phrase">Favorite Human Phrase *</label>
+                <textarea name="favorite_phrase" id="favorite-phrase" required></textarea>
+                <div class="field-hint">Must contain at least one emoji or punctuation mark</div>
+                <div class="error" id="phrase-error"></div>
+                <div class="success" id="phrase-success">✓ Valid phrase</div>
+            </div>
+
+            <div class="form-group">
+                <label for="landing-date">Landing Date *</label>
+                <input type="datetime-local" name="landing_date" id="landing-date" required>
+                <div class="field-hint">Cannot be in the past</div>
+                <div class="error" id="date-error"></div>
+                <div class="success" id="date-success">✓ Valid landing date</div>
+            </div>
+
+            <div class="form-group">
+                <label for="species">Species Classification *</label>
+                <input type="text" name="species" id="species" required>
+                <div class="field-hint">Must start with a capital letter and contain 5-20 characters</div>
+                <div class="error" id="species-error"></div>
+                <div class="success" id="species-success">✓ Valid species</div>
+            </div>
+
+            <div class="form-group">
+                <label for="galaxy">Home Galaxy *</label>
+                <select name="galaxy" id="galaxy" required>
+                    <option value="">-- Select Galaxy --</option>
+                    <option value="andromeda">Andromeda</option>
+                    <option value="milky-way">Milky Way</option>
+                    <option value="triangulum">Triangulum</option>
+                    <option value="whirlpool">Whirlpool</option>
+                    <option value="sombrero">Sombrero</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="galaxy-error"></div>
+                <div class="success" id="galaxy-success">✓ Galaxy selected</div>
+            </div>
+
+            <div class="form-group">
+                <label for="ship-serial">Spaceship Serial Number *</label>
+                <input type="text" name="ship_serial" id="ship-serial" required>
+                <div class="field-hint">Format: SS-XXXX-XXXX (SS- followed by 4 alphanumeric-4 alphanumeric)</div>
+                <div class="error" id="ship-error"></div>
+                <div class="success" id="ship-success">✓ Valid serial number</div>
+            </div>
+
+            <div class="form-group">
+                <label for="telepathy-level">Telepathy Level (1-100) *</label>
+                <input type="number" name="telepathy_level" id="telepathy-level" min="1" max="100" required>
+                <div class="field-hint">Must be a multiple of 5</div>
+                <div class="error" id="telepathy-error"></div>
+                <div class="success" id="telepathy-success">✓ Valid level</div>
+            </div>
+
+            <div class="form-group">
+                <label for="visit-reason">Reason for Earth Visit *</label>
+                <textarea name="visit_reason" id="visit-reason" required></textarea>
+                <div class="field-hint">Between 20-500 characters</div>
+                <div class="error" id="reason-error"></div>
+                <div class="success" id="reason-success">✓ Valid reason</div>
+            </div>
+
+            <button type="submit" class="submit-btn">SUBMIT IMMIGRATION REQUEST</button>
+        </form>
+
+        <div class="success-message" id="success-msg">
+            🛸 IMMIGRATION REQUEST SUBMITTED SUCCESSFULLY! 🛸<br>
+            Welcome to Earth, traveler!
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
